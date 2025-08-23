@@ -7,7 +7,7 @@ HEADERS = {"Authorization": f"Bearer {API_TOKEN}"}
 
 def handler(request):
     try:
-        # Vercel에서 query parameter 읽기
+        # Vercel query parameter
         tag = request.args.get("tag") if hasattr(request, "args") else request.query.get("tag")
         if not tag:
             return {"status": 400, "body": "Player tag missing"}
