@@ -1,8 +1,7 @@
 {
-  "version": 2,
-  "functions": {
-    "api/best-brawler-card.py": {
-      "runtime": "vercel-python@0.1.0"
-    }
+  "name": "my-brawlstarts-card-api",
+  "version": "1.0.0",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
   }
 }
