@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 
 export default async function handler(req, res) {
   try {
-    const tag = req.query.tag;
+    let tag = req.query.tag;
     if (!tag) {
       return res.status(400).send("Player tag missing");
     }
@@ -12,7 +12,10 @@ export default async function handler(req, res) {
       return res.status(500).send("API_KEY environment variable missing");
     }
 
-    const encodedTag = tag.replace("#", "%23");
+    // 서버에서 자동으로 # 붙이고 URL 인코딩
+    tag = "#" + tag;
+    const encodedTag = encodeURIComponent(tag);
+
     const url = `https://api.brawlstars.com/v1/players/${encodedTag}`;
 
     const response = await fetch(url, {
