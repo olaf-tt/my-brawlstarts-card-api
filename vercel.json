@@ -1,7 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "api/brawler_card.py": {
+    "api/best-brawler-card.py": {
       "runtime": "vercel-python@0.1.0"
     }
   }
