@@ -1,4 +1,6 @@
 import fetch from "node-fetch";
+import dotenv from "dotenv";
+dotenv.config();
 
 export default async function handler(req, res) {
   try {
@@ -42,24 +44,33 @@ export default async function handler(req, res) {
 
     const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="180">
-  <defs>
-    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="white" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="white" stop-opacity="0.05"/>
-    </linearGradient>
-    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.25"/>
-    </filter>
-  </defs>
-  <rect width="100%" height="100%" rx="20" ry="20" fill="url(#glass)" filter="url(#shadow)"/>
+  <!-- 배경 -->
+  <rect width="100%" height="100%" rx="20" ry="20" fill="#1f2937"/>
+
+  <!-- 로고 -->
   <image href="https://store.supercell.com/_next/static/media/logo.38da3d7b.png"
          x="16" y="16" width="50" height="50" preserveAspectRatio="xMidYMid meet"/>
-  <text x="80" y="50" font-size="24" fill="#00ffff" font-family="sans-serif">${playerName}</text>
-  <text x="80" y="90" font-size="20" fill="#ffffff" font-family="sans-serif">${topBrawler.name}</text>
-  <text x="80" y="120" font-size="16" fill="#ffffff" font-family="sans-serif">
+
+  <!-- 플레이어 이름 -->
+  <text x="80" y="50" font-size="28" fill="#00ffff" font-family="Verdana, sans-serif" font-weight="bold">
+    ${playerName}
+  </text>
+
+  <!-- 상위 브롤러 이름 -->
+  <text x="80" y="95" font-size="22" fill="#ffffff" font-family="Verdana, sans-serif" font-weight="bold">
+    ${topBrawler.name}
+  </text>
+
+  <!-- 트로피 정보 -->
+  <text x="80" y="130" font-size="16" fill="#d1d5db" font-family="Verdana, sans-serif">
     현재 트로피: ${topBrawler.trophies} / 최대: ${topBrawler.highestTrophies}
   </text>
-  <image href="${imageUrl}" x="450" y="20" width="120" height="120" preserveAspectRatio="xMidYMid meet"/>
+
+  <!-- 브롤러 이미지 -->
+  <image href="${imageUrl}" x="450" y="30" width="120" height="120" preserveAspectRatio="xMidYMid meet"/>
+
+  <!-- 하단 강조선 -->
+  <rect x="0" y="170" width="600" height="4" fill="#00ffff" rx="2"/>
 </svg>
 `;
 
