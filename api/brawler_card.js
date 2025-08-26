@@ -52,7 +52,7 @@ export default async function handler(req, res) {
          x="16" y="16" width="50" height="50" preserveAspectRatio="xMidYMid meet"/>
 
   <!-- 플레이어 이름 -->
-  <text x="80" y="50" font-size="28" fill="#00ffff" font-family="Verdana, sans-serif" font-weight="bold">
+  <text x="80" y="50" font-size="28" fill="#e2ff81ff" font-family="Verdana, sans-serif" font-weight="bold">
     ${playerName}
   </text>
 
@@ -68,9 +68,6 @@ export default async function handler(req, res) {
 
   <!-- 브롤러 이미지 -->
   <image href="${imageUrl}" x="450" y="30" width="120" height="120" preserveAspectRatio="xMidYMid meet"/>
-
-  <!-- 하단 강조선 -->
-  <rect x="0" y="170" width="600" height="4" fill="#00ffff" rx="2"/>
 </svg>
 `;
 
