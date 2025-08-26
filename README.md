@@ -9,7 +9,7 @@
 3. 그래서 AWS free tier 계정을 만듬 -> AWS 환경에서 node.js로 API 서버를 구축함 (node-fetch, express)
 4. 잘 동작함. IP 주소 입력하고 브라우저에서 보면 잘 보임  
 5. 문제는 Github에서 URL로 뭔가 갖고올려면 HTTPS로 통신해야 한다고 함  
-6. 그래서 Nginx, Let's encrypt 설치하고 도메인은 Duck DNS(무료 도메인)로 갖고왔음
+6. 그래서 Nginx, Let's encrypt 설치하고 도메인은 [Duck DNS(무료 도메인)](https://www.duckdns.org/domains)로 갖고왔음
 7. 근데 결국 "Cannot proxy the given URL" 에러 뜸
 
 # 결과물
