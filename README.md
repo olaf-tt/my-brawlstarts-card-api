@@ -11,3 +11,12 @@
 5. 문제는 Github에서 URL로 뭔가 갖고올려면 HTTPS로 통신해야 한다고 함  
 6. 그래서 Nginx, Let's encrypt 설치하고 도메인은 Duck DNS(무료 도메인)로 갖고왔음
 7. 근데 결국 "Cannot proxy the given URL" 에러 뜸
+
+# 결과물
+아쉽게도 github의 md 파일에 추가하지 못했지만 결과는 이렇게 나온다.  
+<img width="610" height="227" alt="스크린샷 2025-08-26 오후 3 11 10" src="https://github.com/user-attachments/assets/ffa8b91f-f605-4e4f-8f52-e359580129ef" />
+
+# 사용법
+`https://olaf-duck.duckdns.org/api/player?tag=8JOOLVOY8`  
+이 URL에서 tag=부분에 자신의 player tag를 넣어주면 된다.  
+브롤스타즈에 접속 후 프로필을 들어가면 이름 밑에 작게 player tag가 떠있다.  
